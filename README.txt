@@ -2,11 +2,11 @@
 
 https://wiki.archlinux.org/index.php/Installation_guide
 
-\# prep net and time
+# prep net and time
 > ping archlinux.org
 > timedatectl set-ntp true
 
-\# fdisk
+# fdisk
 
 > fdisk -l
 > fdisk /dev/sda
@@ -17,10 +17,12 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > mkfs.ext4 /dev/sda1
 > mount /dev/sda1 /mnt
 > pacstrap /mnt base
-\# linux lts - start
+
+# linux lts - start
 > pacman -Sy
 > pacstrap /mnt $(pacman -Sqg base | sed 's/^linux$/&-lts/')
-\# linux lts - end
+# linux lts - end
+
 > genfsstab -U /mnt >> /mnt/etc/fstab
 > arch-chroot /mnt
 > ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
@@ -45,12 +47,12 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > vi /etc/resolv.conf
 ~ nameserver 8.8.4.4 8.8.8.8 # 208.67.220.220 208.67.222.222
 
-\# syslinux
+# syslinux
 > pacman -S syslinux
 > syslinux-install_update -i -a -m
 > vi /boot/syslinux/syslinux.cfg
 ~ ..... /dev/sda1
 
-\# FIN!
+# FIN!
 > exit
 > poweroff
