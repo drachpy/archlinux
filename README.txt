@@ -50,7 +50,7 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > poweroff
 
 
-### POST INSTALL
+### NETWORKING
 > ps 
 # you should see BASH running
 
@@ -69,7 +69,6 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > ping archlinux.org
 
 > pacman -Syyu
-> pacman -S sudo
 > useradd -m -G wheel -s /bin/bash user1
 > passwd user1
 
@@ -79,3 +78,7 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > vi /boot/syslinux/syslinux.cfg
 ~ ... add linux-lts...
 > reboot
+
+### POST INSTALL
+> pacman -S base-devel vim xorg git
+> 
