@@ -3,7 +3,6 @@
 https://wiki.archlinux.org/index.php/Installation_guide
 
 \# prep net and time
-
 > ping archlinux.org
 > timedatectl set-ntp true
 
