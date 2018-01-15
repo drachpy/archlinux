@@ -27,6 +27,8 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > arch-chroot /mnt
 > ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 > hwclock --systohc
+> vi /etc/vconsole.conf
+~ KEYMAP=us
 > locale-gen
 > vi /etc/locale.conf
 ~ LANGUAGE=en_us.UTF-8
@@ -81,4 +83,15 @@ https://wiki.archlinux.org/index.php/Installation_guide
 
 ### POST INSTALL
 > pacman -S base-devel vim xorg git
-> 
+> mkdir ~/AUR
+> cd AUR
+> git clone https://aur.archlinux.org/st.git
+> cd st
+> makepkg -si
+> git clone https://aur.archlinux.org/dwm.git
+> cd dwm
+> makepkg -si
+> sudo pacman -S dmenu
+> sudo pacman -S xorg-xinit
+> vim ~/.xinitrc
+~ exec dwm
