@@ -38,14 +38,6 @@ https://wiki.archlinux.org/index.php/Installation_guide
 ~ ::1    localhost    localhost
 > mkinitcpio -p linux
 > passwd
-> vi /etc/systemd/network/en.network
-~ [Match]
-~ Name=en\*
-~ 
-~ [Network]
-~ DHCP=v4
-> vi /etc/resolv.conf
-~ nameserver 8.8.4.4 8.8.8.8 # 208.67.220.220 208.67.222.222
 
 # syslinux
 > pacman -S syslinux
@@ -56,3 +48,34 @@ https://wiki.archlinux.org/index.php/Installation_guide
 # FIN!
 > exit
 > poweroff
+
+
+### POST INSTALL
+> ps 
+# you should see BASH running
+
+> vi /etc/systemd/network/en.network
+~ [Match]
+~ Name=en\*
+~ 
+~ [Network]
+~ DHCP=v4
+~
+> vi /etc/resolv.conf
+~ nameserver 8.8.4.4 8.8.8.8 # 208.67.220.220 208.67.222.222
+> systemctl enable systemd-networkd
+> ip a
+# you should have IP by now
+> ping archlinux.org
+
+> pacman -Syyu
+> pacman -S sudo
+> useradd -m -G wheel -s /bin/bash user1
+> passwd user1
+
+### LOGOUT as root
+
+> sudo pacman -S linux-lts
+> vi /boot/syslinux/syslinux.cfg
+~ ... add linux-lts...
+> reboot
