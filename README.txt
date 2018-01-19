@@ -78,18 +78,25 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > reboot
 
 ### POST INSTALL
-> pacman -S base-devel vim xorg git adobe-source-code-pro-fonts ufw
+> pacman -S base-devel vim xorg xorg-xinit git ttf-dejavu adobe-source-code-pro-fonts ufw mate-terminal jdk8-openjdk mono python3 python2 curl wget tree htop
 > sudo ufw enable
 > sudo ufw status verbose
 > sudo systemctl enable ufw.service
-> mkdir ~/AUR
-> cd AUR
+> mkdir ~/.AUR
+> cd ~/.AUR
 > git clone https://aur.archlinux.org/st.git
 > cd st
 > makepkg -si
 > git clone https://aur.archlinux.org/dwm.git
 > cd dwm
+# edit config to use mate-terminal instead of st
 > makepkg -si
-> sudo pacman -S xorg-xinit
 > vim ~/.xinitrc
 ~ exec dwm
+> mkdir -p ~/.source/github
+> cd ~/.source/github
+> git clone https://www.github.com/pypa/get-pip.py
+> cd ~/.source/github/get-pip/2<tab>
+> python2 get-pip.py
+> cd ~/.source/github/get-pip/3<tab>
+> python3 get-pip.py
