@@ -78,6 +78,12 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > reboot
 
 ### POST INSTALL
+> sudo vi /etc/systemd/swap.conf
+# search for swapfu
+~ swapfu_enabled=1
+> sudo systemctl enable systemd-swap
+> sudo vi /etc/sysctl.d/99-sysctl.conf
+~ vm.swappiness=10
 > pacman -S base-devel vim xorg xorg-xinit git ttf-dejavu adobe-source-code-pro-fonts ufw mate-terminal jdk8-openjdk mono python3 python2 curl wget tree htop
 > sudo ufw enable
 > sudo ufw status verbose
