@@ -30,10 +30,10 @@ How to read this file.
 > hwclock --systohc
 > vi /etc/vconsole.conf
 ~ KEYMAP=us
-> locale-gen
 > vi /etc/locale.conf
 ~ LANGUAGE=en_us.UTF-8
 ~ LANG=en_US.UTF-8
+> locale-gen
 > vi /etc/hostname
 ~ myarch
 > vi /etc/hosts
