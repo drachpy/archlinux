@@ -91,7 +91,6 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > git clone https://aur.archlinux.org/dwm.git
 > cd dwm
 > makepkg -si
-> sudo pacman -S dmenu
 > sudo pacman -S xorg-xinit
 > vim ~/.xinitrc
 ~ exec dwm
