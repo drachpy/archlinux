@@ -18,11 +18,6 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > mount /dev/sda1 /mnt
 > pacstrap /mnt base
 
-# linux lts - start
-> pacman -Sy
-> pacstrap /mnt $(pacman -Sqg base | sed 's/^linux$/&-lts/')
-# linux lts - end
-
 > genfsstab -p /mnt >> /mnt/etc/fstab
 > arch-chroot /mnt
 > ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
@@ -76,7 +71,7 @@ https://wiki.archlinux.org/index.php/Installation_guide
 
 ### LOGOUT as root
 
-> sudo pacman -S linux-lts
+> sudo pacman -S linux-lts linux-lts-headers
 > vi /boot/syslinux/syslinux.cfg
 ~ ... add linux-lts...
 > reboot
