@@ -23,7 +23,7 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > pacstrap /mnt $(pacman -Sqg base | sed 's/^linux$/&-lts/')
 # linux lts - end
 
-> genfsstab -U /mnt >> /mnt/etc/fstab
+> genfsstab -p /mnt >> /mnt/etc/fstab
 > arch-chroot /mnt
 > ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 > hwclock --systohc
