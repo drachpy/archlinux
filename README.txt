@@ -73,7 +73,8 @@ https://wiki.archlinux.org/index.php/Installation_guide
 
 > sudo pacman -S linux-lts linux-lts-headers
 > vi /boot/syslinux/syslinux.cfg
-~ ... add linux-lts...
+~ ... setup linux-lts...
+> sudo pacman -Rs linux
 > reboot
 
 ### POST INSTALL
