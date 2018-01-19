@@ -78,7 +78,9 @@ https://wiki.archlinux.org/index.php/Installation_guide
 > reboot
 
 ### POST INSTALL
-> pacman -S base-devel vim xorg git adobe-source-code-pro-fonts
+> pacman -S base-devel vim xorg git adobe-source-code-pro-fonts ufw
+> sudo ufw enable
+> sudo ufw status verbose
 > mkdir ~/AUR
 > cd AUR
 > git clone https://aur.archlinux.org/st.git
