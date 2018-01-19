@@ -1,6 +1,12 @@
 # archlts
 
 https://wiki.archlinux.org/index.php/Installation_guide
+How to read this file.
+1. # is a comment or a note
+2. > run this on a terminal/console
+3. ~ content of a file
+
+### STEPS 1 2 3 go!
 
 # prep net and time
 > ping archlinux.org
