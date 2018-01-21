@@ -5,8 +5,7 @@
 2. $ wget tiny.cc/archinstall
 3. $ chmod a+x archinstall
 4 run the script: $ ./archinstall
-5. When you got the arch-chroot prompt: $ chmod a+x install.sh
-6. run the prep script: $ ./install.sh
+5. run the prep script: $ ./install.sh
 
 
 ### Do it manually?
