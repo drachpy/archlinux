@@ -9,3 +9,4 @@ mount /dev/sda1 /mnt
 pacstrap /mnt base
 genfstab -p /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
+wget https://raw.githubusercontent.com/drachpy/archlts/master/install-prep.sh > /mnt/tmp/install.sh
