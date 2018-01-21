@@ -7,7 +7,6 @@ printf 'n\n\n\n\n\nw\n' | fdisk /dev/sda
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 pacstrap /mnt base
-pacman -S base
 genfsstab -p /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ln -sf /usr/share/zoneinfo/Pacific/Auckland /etc/localtime
