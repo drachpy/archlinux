@@ -2,7 +2,8 @@
 
 # set /etc/pacman.d/mirrorlist to the closest repo
 
-parted -a optimal /dev/sda mkpart primary 0% 100% -s
+printf 'n\n\n\n\n\nw\n' | fdisk /dev/disk
+#parted -a optimal /dev/sda mkpart primary 0% 100% -s
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 pacstrap /mnt base
@@ -23,4 +24,4 @@ pacman -S syslinux
 syslinux-install_update -i -a -m
 sed -i 's/\/dev\/sda3/\/dev\/sda1/' /boot/syslinux/syslinux.cfg
 passwd
-poweroff
+#poweroff
