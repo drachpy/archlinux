@@ -10,8 +10,9 @@ pacman -S base
 genfsstab -p /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ln -sf /usr/share/zoneinfo/Pacific/Auckland /etc/localtime
+hwclock --systohc
 echo "KEYMAP=us" >> /etc/vconsole.conf
-echo "LANGUAGE=en_US.UTF-8" >e /etc/locale.conf
+echo "LANGUAGE=en_US.UTF-8" > /etc/locale.conf
 echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 locale-gen
 echo "dracha" > /etc/hostname
