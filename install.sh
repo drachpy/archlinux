@@ -11,4 +11,6 @@ genfstab -U /mnt >> /mnt/etc/fstab
 wget https://raw.githubusercontent.com/drachpy/archlinux/master/install-prep.sh
 mv install-prep.sh /mnt/install.sh
 chmod a+x /mnt/install.sh
-arch-chroot /mnt
+arch-chroot /mnt ./install.sh
+rm /mnt/install.sh
+umount /mnt
