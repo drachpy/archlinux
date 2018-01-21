@@ -12,6 +12,7 @@
 4. $ chmod a+x archinstall
 5 run the script: $ ./archinstall
 6. run the prep script: $ ./install.sh
+7. reboot and login as root to the new system then run post install: $ ./install.sh
 
 
 ### Do it manually?
