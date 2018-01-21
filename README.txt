@@ -1,4 +1,15 @@
-# archlts
+# archlinux
+
+### TL;DR;
+1. Boot to archlinux iso
+2. $ wget tiny.cc/archinstall
+3. $ chmod a+x archinstall
+4 run the script: $ ./archinstall
+5. When you got the arch-chroot prompt: $ chmod a+x install.sh
+6. run the prep script: $ ./install.sh
+
+
+### Do it manually?
 
 https://wiki.archlinux.org/index.php/Installation_guide
 How to read this file.
