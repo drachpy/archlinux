@@ -16,8 +16,8 @@ chmod a+x /mnt/install.sh
 
 # COPY post install
 wget https://raw.githubusercontent.com/drachpy/archlinux/master/install-post-1.sh
-cp install-post-1.sh /mnt/home/root/install-post.sh
-chmod a+x /mnt/home/root/install-post.sh
+cp install-post-1.sh /mnt/root/install-post.sh
+chmod a+x /mnt/root/install-post.sh
 
 # RUN prep install
 arch-chroot /mnt ./install.sh
