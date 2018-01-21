@@ -14,4 +14,5 @@ passwd
 pacman -S --noconfirm syslinux
 syslinux-install_update -i -a -m
 sed -i 's/\/dev\/sda3/\/dev\/sda1/' /boot/syslinux/syslinux.cfg
+extlinux --install /boot/syslinux/
 echo "Exit and reboot"
