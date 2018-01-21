@@ -8,7 +8,7 @@ mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 pacstrap /mnt base
 genfstab -U /mnt >> /mnt/etc/fstab
-wget https://raw.githubusercontent.com/drachpy/archlts/master/install-prep.sh
+wget https://raw.githubusercontent.com/drachpy/archlinux/master/install-prep.sh
 mv install-prep.sh /mnt/install.sh
 chmod a+x /mnt/install.sh
 arch-chroot /mnt
