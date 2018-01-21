@@ -2,7 +2,7 @@
 
 # set /etc/pacman.d/mirrorlist to the closest repo
 
-parted -a optimal /dev/sda mkpart optimal 0% 100% -s
+parted -a optimal /dev/sda mkpart primary 0% 100% -s
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 pacstrap /mnt base
