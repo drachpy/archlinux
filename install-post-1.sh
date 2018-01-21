@@ -14,7 +14,7 @@ ip a
 
 # SYSTEM update
 pacman -Syyu --noconfirm
-pacman -Sy --noconfirm base-devel systemd-swap sudo vim xorg xorg-xinit git ttf-dejavu adobe-source-code-pro-fonts ufw xfce4-terminal jdk8-openjdk mono python2 curl wget tree htop
+pacman -Sy --noconfirm base-devel systemd-swap sudo vim xorg xorg-xinit git curl wget tree htop ttf-dejavu adobe-source-code-pro-fonts ufw xfce4-terminal jdk8-openjdk mono python2 firefox flatpak
 
 # UFW enable
 ufw enable
