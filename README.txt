@@ -17,7 +17,7 @@ How to read this file.
 2. > run this on a terminal/console
 3. ~ content of a file
 
-### STEPS 1 2 3 go!
+### 1, 2, 3 go!!!
 
 # prep net and time
 > ping archlinux.org
@@ -34,9 +34,10 @@ How to read this file.
 > mkfs.ext4 /dev/sda1
 > mount /dev/sda1 /mnt
 > pacstrap /mnt base
-
 > genfsstab -p /mnt >> /mnt/etc/fstab
 > arch-chroot /mnt
+
+### PREP STAGE
 > ln -sf /usr/share/zoneinfo/America/New_York /etc/localtime
 > hwclock --systohc
 > vi /etc/vconsole.conf
@@ -52,7 +53,6 @@ How to read this file.
 ~ ::1    localhost    localhost
 > mkinitcpio -p linux
 > passwd
-
 # syslinux
 > pacman -S syslinux
 > syslinux-install_update -i -a -m
