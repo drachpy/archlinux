@@ -2,6 +2,7 @@
 
 # set /etc/pacman.d/mirrorlist to the closest repo
 
+vim /etc/pacman.d/mirrorlist
 printf 'n\n\n\n\n\nw\n' | fdisk /dev/sda
 #parted -a optimal /dev/sda mkpart primary 0% 100% -s
 mkfs.ext4 /dev/sda1
