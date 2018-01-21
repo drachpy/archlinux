@@ -15,3 +15,4 @@ genfstab -p -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt ./install.sh
 rm /mnt/install.sh
 umount /mnt
+reboot
