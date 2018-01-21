@@ -10,7 +10,7 @@ echo "dracha" > /etc/hostname
 echo "127.0.0.1    localhost    localhost" > /etc/hosts
 echo "::1          localhost    localhost" >> /etc/hosts
 mkinitcpio -p linux
-pacman -S syslinux
+pacman -S --noconfirm syslinux
 syslinux-install_update -i -a -m
 sed -i 's/\/dev\/sda3/\/dev\/sda1/' /boot/syslinux/syslinux.cfg
 passwd
