@@ -8,8 +8,8 @@ DHCP=v4
 EOT
 
 echo "nameserver 208.67.220.220 8.8.4.4" >> /etc/resolv.conf
-systemctl start system-networkd
-systemctl enable system-networkd
+systemctl start systemd-networkd
+systemctl enable systemd-networkd
 ip a
 
 # SYSTEM update
