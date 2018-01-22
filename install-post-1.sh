@@ -29,7 +29,12 @@ systemctl start systemd-swap
 systemctl enable systemd-swap
 
 # CREATE user arch
-useradd -m -G wheel -s /bin/bash arch
-passwd arch
+useradd -m -G wheel -s /bin/bash drach
+passwd drach
+visudo
 
-echo "Reboot and log in as arch"
+wget https://raw.githubusercontent.com/drachpy/archlinux/master/install-post-2.sh
+mv install-post-2.sh /home/drach/install.sh
+chmod a+x /home/drach/install.sh
+
+echo "Re-login as drach and run install.sh"
