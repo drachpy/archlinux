@@ -2,17 +2,12 @@
 
 ### TL;DR;
 1. Boot to archlinux iso
-2. Actually tried to do auto fdisk but seems to fail somewhere so I just commented it out. You just need to manually partition your disk and make sure that /dev/sda1 contains your /boot.
-    $ fdisk /dev/sda
-      n
-      p
-      ... once you are done with partitioning
-      w
-3. $ wget tiny.cc/archinstall
-4. $ chmod a+x archinstall
-5 run the script: $ ./archinstall
-6. run the prep script: $ ./install.sh
-7. reboot and login as root to the new system then run post install: $ ./install.sh
+2. $ wget tiny.cc/archinstall
+3. $ chmod a+x archinstall
+4. run the script: $ ./archinstall
+5. reboot and login as root to the new system. Edit the file install.sh to fit your needs and then run post install: $ ./install.sh
+6. logout and login as the user you created, run against ./install.sh
+7. startx to run DWM.
 
 
 ### Do it manually?
