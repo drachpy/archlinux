@@ -129,3 +129,7 @@ How to read this file.
 > python2 get-pip.py
 > cd ~/.source/github/get-pip/3<tab>
 > python3 get-pip.py
+
+
+### When going LTS you might as well try to ignore some packages in your /etc/pacman.conf
+IgnorePkg = linux linux-headers linux-lts linux-headers-lts virtualbox virtualbox-guest-iso virtualbox-host-modules virtualbox-host-modules-lts
