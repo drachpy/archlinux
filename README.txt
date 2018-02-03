@@ -52,6 +52,7 @@ How to read this file.
 > vi /etc/hosts
 ~ 127.0.0.1    localhost    localhost
 ~ ::1    localhost    localhost
+# impt: see note at the bottom of this file if you are booting from USB
 > mkinitcpio -p linux
 > passwd
 # syslinux
@@ -128,3 +129,8 @@ How to read this file.
 
 ### When going LTS you might as well try to ignore some packages in your /etc/pacman.conf
 IgnorePkg = linux linux-headers linux-lts linux-headers-lts virtualbox virtualbox-guest-iso virtualbox-host-modules virtualbox-host-modules-lts
+
+# Booting from USB? before running > mkinitcpio -p linux
+> vim /etc/mkinitcpio.conf
+# Search for HOOKS
+~ move the `block` before autodetect
