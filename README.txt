@@ -5,8 +5,9 @@
 2. $ wget tiny.cc/archinstall
 3. $ chmod a+x archinstall
 4. run the script: $ ./archinstall
-5. reboot and login as root to the new system. Edit the file install.sh to fit your needs and then run post install: $ ./install.sh
-6. logout and login as the user you created, run against ./install.sh
+Note: This will auto shutdown the image once it is done. You can remove the disk and start the machine.
+5. login as root to the new system. Edit the file install-post.sh to fit your needs like user name and other commands you wanted to run and then run post install: $ ./install-post.sh
+6. logout and login as the user you created, run again ./install.sh to prep the user related environment
 7. startx to run DWM.
 
 
